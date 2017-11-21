@@ -1,0 +1,292 @@
+.content
+{
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 1.5fr) 1fr;
+    grid-template-rows: repeat(5, max-content);
+    grid-row-gap: 10px;
+    grid-template-areas: 'lg c c c r'
+        'l n n b r'
+        'l s s s r'
+        'l m m m r'
+        'l w w w r';
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+.content li
+{
+    margin-bottom: 10px;
+}
+
+.geolocation
+{
+    grid-area: lg;
+    display: flex;
+    margin: 5px;
+    color: #999;
+}
+
+.arrow
+{
+    height: 13px;
+    margin-right: 3px;
+}
+
+p
+{
+    margin: 0;
+}
+
+.right-column
+{
+    grid-area: r;
+}
+
+.autorization
+{
+    border-radius: 3px;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.1), 0 2px 6px 0 rgba(0,0,0,.1);
+}
+
+.login,
+.logo
+{
+    font-weight: bold;
+}
+
+.login,
+.email
+{
+    padding: 5px;
+}
+
+.news
+{
+    grid-area: n;
+}
+
+.news h2,
+.news h3
+{
+    display: inline;
+}
+
+.date,
+.change,
+.channel,
+.helper-search a,
+.auto_news_articles .time
+{
+    display: inline;
+    color: #999;
+}
+
+ul
+{
+    padding: 0;
+}
+
+.exchange .currency
+{
+    margin-right: 15px;
+}
+
+.exchange div
+{
+    display: inline-block;
+    
+}
+
+.browser
+{
+    grid-area: b;
+}
+
+.browser img
+{
+    width: 120px;
+}
+
+.search
+{
+    grid-area: s;
+    position: relative;
+}
+
+form
+{
+    font-size: 0;
+}
+
+.logo
+{
+    grid-area: y;
+    font-family: 'Oswald';
+    font-size: 28px;
+    display: inline-block;
+    position: absolute;
+    right: 100%;
+    padding-right: 20px;
+    line-height: 38px;
+}
+
+.logo::first-letter,
+.login::first-letter
+{
+    color: #f00;
+}
+
+.input-search
+{
+    width: calc(100% - 114px);
+    font-size: 18px;
+    border: 2px solid #ffdb4d;
+    height: 32px;
+    padding: 1px 0 1px 10px;
+}
+
+.input-search:focus
+{
+    outline: none;
+}
+
+.button-search
+{
+    font-size: 18px;
+    height: 38px;
+    border: none;
+    vertical-align: bottom;
+    background-color: #ffdb4d;
+    padding: 0 30px 0 15px;
+    width: 100px;
+}
+
+.button-search:active
+{
+    background-color: #f2cf46;
+    border-color: #f2cf46;
+}
+
+.button-search:active,
+.button-search:focus
+{
+    outline: none;
+}
+
+.button-search-decoration,
+.after-input-search
+{
+    position: relative;
+    display: inline-block;
+    height: 38px;
+    vertical-align: bottom;
+    width: 0;
+}
+
+.button-search-decoration div
+{
+    background-color: #fff;
+    position: absolute;
+    height: 100%;
+    width: 30px;
+    left: -15px;
+}
+
+.button-search-decoration div:first-child
+{
+    transform-origin: left top;
+    transform: rotate(-25deg);
+}
+
+.button-search-decoration div:last-child
+{
+    transform-origin: left bottom;
+    transform: rotate(25deg);
+}
+
+.keyboard,
+.speech
+{
+    position: absolute;
+    height: 36px;
+    cursor: pointer;
+    opacity: .3;
+}
+
+.keyboard
+{
+
+    width: 27px;
+    background-image: url('key.svg');
+    background-repeat: no-repeat;
+    background-position-y: 12px;
+    left: -39px;
+}
+
+.speech
+{
+    width: 36px;
+    background: url('https://yastatic.net/www/_/o/p/gUBBX8WZqmSesz-PjnRuK7msk.svg') 0 7px no-repeat;
+    left: -70px;
+}
+
+.keyboard:hover,
+.speech:hover,
+.more:hover
+{
+    opacity: .7;
+}
+
+.widgets
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    grid-area: w;
+    max-height: 480px;
+}
+
+.widget
+{
+    width: 33%;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.time
+{
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.tv_online {
+    background-image: linear-gradient(to right, #00a3fa, #716ef8);
+    color: #fff;
+    margin-left: 10px;
+    height: 25px;
+    font-size: .9em;
+    border: none;
+}
+
+.auto_news_articles
+{
+    max-height: 200px;
+    overflow: scroll;
+}
+
+.temperature
+{
+    padding-left: 10px;
+}
+
+.maps_map_choice {
+    font-weight: bold;
+    color: #000;
+    margin-left: 5px;
+}

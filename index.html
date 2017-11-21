@@ -3,7 +3,182 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Морда»</title>
+    <link rel="stylesheet" href="index.css">    
 </head>
 <body>
+    <div class="content">
+        <section class="geolocation">
+            <img class="arrow" src="geoarrow.png" alt="arrow">
+            <p>Екатеринбург</p>
+        </section>
+        <section class="right-column">
+            <div class="autorization">
+                <div class="login">Login</div>
+                <div class="email">Почта <b>54</b></div>
+            </div>
+        </section>
+        <section class="news">
+            <h2>Сейчас в СМИ</h2>
+            <h3>в Екатеринбурге</h3>
+            <div class="date">21 ноября, вторник 3:44</div>
+            <ul>
+                <li>Историк прокомментировал слова ямальского школьника в Бундестаге</li>
+                <li>В Белоруссии показали кадры допроса обвиняемого в шпионае украинца</li>
+                <li>Патриарх Кирилл общестово не допустить "окончания истории"</li>
+                <li>Меркель выступила за проведение новых выборов в бундестаг</li>
+                <li>ВМС Аргентины изучают зафиксированные в зоне поиска подлодки шумы</li>
+            </ul>
+            <div class="exchange">
+                <div class="currency">
+                    <a href="#" class="label">USD ЦБ</a>
+                    <div class="value">59,27</div>
+                </div>
+                <div class="currency">
+                    <a href="#" class="label">EUR ЦБ</a>
+                    <div class="value">69,67</div>
+                </div>
+                <div class="currency">
+                    <a href="#" class="label">НЕФТЬ</a>
+                    <div class="value">62,13</div>
+                    <div class="change">-0,97%</div>
+                </div>
+            </div>
+        </section>
+        <section class="browser">
+            <h2>
+                <a href="#">
+                    <img alt="Yandex.Browser" src="yandex-brauzer.png">
+                    <p>Браузер</p>
+                    <p>без опасности</p>
+                </a>
+            </h2>
+            <p>Технология протект</p>
+        </section>
+        <section class="search">
+            <div class="logo">Яндекс</div>
+            <form action="https://yandex.ru/search/">
+                <input type="text" name="text" class="input-search">
+                <div class="after-input-search">
+                    <div class="speech"></div>
+                    <div class="keyboard"></div>
+                </div>
+                <button type="submit" class="button-search">Поиск</button>
+                <div class="button-search-decoration">
+                    <div></div>
+                    <div></div>
+                </div>
+            </form>
+            <div class="helper-search">
+                <span>Найдется всё. Например,</span>
+                <a href="#">javascript mdn</a>
+            </div>
+            <div class="banner-under-search">
+                <a href="#">
+                    <img alt="Heroes III" src="ad.png">
+                </a>
+            </div>
+        </section>
+        <section class="widgets">
+            <div class="widget services">
+                <h3><a href="services" class="services_header">Посещаемое</a></h3>
+                <div class="service_description">
+                    <strong class="service_name">Маркет</strong> — товары из Китая
+                </div>
+                <div class="service_description">
+                    <strong class="service_name">Авто.ру</strong> — мощный Хёндай Туссан
+                </div>
+                <div class="service_description">
+                    <strong class="service_name">Недвижимость</strong> — студии с подарками
+                </div>
+                <div class="service_description">
+                    <strong class="service_name">Работа</strong> — главный инженер
+                </div>
+                <div class="service_description">
+                    <strong class="service_name">Такси</strong> — новые выгодные тарифы
+                </div>
+                <div class="service_description">
+                    <strong class="service_name">Здоровье</strong> — поговорите с врачом
+                </div>
+                <div class="service_description">
+                    <strong class="service_name">Коллекции</strong> — всё о свадьбе
+                </div>
+            </div>
+            <div class="widget tv">
+                <h3><a href="tv">Телепрограмма</a></h3>
+                <button class="tv_online">ТВ онлайн</button>
+                <ul class="tv_list">
+                    <li class="tv_list_item">
+                        <span class="time">23:00</span>
+                        <span class="title">Адская кухня</span> <span class="channel">Пятница</span>
+                    </li>
+                    <li class="tv_list_item">
+                        <span class="time">23:00</span>
+                        <span class="title">Дом-2. Город любви</span> <span class="channel">ТНТ</span>
+                    </li>
+                    <li class="tv_list_item">
+                        <span class="time">23:15</span>
+                        <span class="title">Родственник</span> <span class="channel">ТВ Центр</span>
+                    </li>
+                    <li class="tv_list_item">
+                        <span class="time">23:15</span>
+                        <span class="title">Дом восковых фигур</span> <span class="channel">ТВ-3</span>
+                    </li>
+                    <li class="tv_list_item">
+                        <span class="time">23:25</span>
+                        <span class="title">АвтоNews</span> <span class="channel">Матч!</span>
+                    </li>
+                    <li class="tv_list_item">
+                        <span class="time">23:25</span>
+                        <span class="title">Григорий Р</span> <span class="channel">Пятый канал</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="widget jokes">
+                <h3><a href="jokes">Лучшие анекдоты</a></h3>
+                <ul class="jokes_list">
+                    <li class="joke joke1">Вас лечить хорошо или бесплатно?</li>
+                </ul>
+            </div>
+            <div class="widget auto_news">
+                <h3><a href="autonews">Автомобильные новости</a></h3>
+                <div class="auto_news_articles">
+                    <div class="news_article">
+                        Правительство поддержало законопроект о регистрации машиномест
+                        <span class="time">12:19</span>
+                    </div>
+                    <div class="news_article">
+                        Обзор нового Mitsubishi, за которым выстроилась очередь
+                        <span class="time">12:01</span>
+                    </div>
+                    <div class="news_article">
+                        Лады оснастят системой управления со смартфона
+                        <span class="time">11:40</span>
+                    </div>
+                    <div class="news_article">
+                        В Китае представили спорткар с двигателем от Focus RS
+                        <span class="time">11:30</span>
+                    </div>
+                    <div class="news_article">
+                        Священник отчитал прихожан, а они заставили его продать Porshe
+                        <span class="time">12:11</span>
+                    </div>
+                </div>
+            </div>
+            <div class="widget weather">
+                <h3><a href="weather">Погода</a> <span class="temperature">−1°C</span></h3>
+                <div class="temperature_prediction">Вечер −3, ночь −3</div>
+            </div>
+            <div class="widget traffic">
+                <h3><a href="traffic">Пробки</a> — <span class="traffic_value">1 балл</span></h3>
+                <div class="traffic_description">Сейчас дороги свободны</div>
+            </div>
+            <div class="widget maps">
+                <h3><a href="map" class="maps_title">Карта Екатеринбурга</a></h3>
+                <a href="taxi" class="maps_map_choice">Такси</a>
+                <a href="rasp" class="maps_map_choice">Расписания</a>
+                <a href="raspavt" class="maps_map_choice">Междугородные&nbsp;автобусы</a>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
