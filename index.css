@@ -1,16 +1,77 @@
+@font-face
+{
+    font-family: font-awesome;
+    src: url(fontawesome-webfont.woff2);
+}
+
 .content
 {
     display: grid;
     grid-template-columns: 1fr repeat(3, 1.5fr) 1fr;
     grid-template-rows: repeat(5, max-content);
     grid-row-gap: 10px;
-    grid-template-areas: 'lg c c c r'
+    grid-template-areas: 'lg c c st r'
         'l n n b r'
         'l s s s r'
         'l m m m r'
         'l w w w r';
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif, font-awesome;
     font-size: 13px;
+}
+
+.settings
+{
+    grid-area: st;
+}
+
+input.settingsB,
+input.settings,
+.jokeB
+{
+    display: none;
+}
+
+.settingsB:checked ~ .content .options
+{
+    visibility: visible;
+}
+
+.mapChec:checked ~ .content .mapB:before,
+.trafficChec:checked ~ .content .trafficB:before,
+.weatherChec:checked ~ .content .weatherB:before,
+.autoChec:checked ~ .content .autoB:before,
+.tvChec:checked ~ .content .tvB:before,
+.jokesChec:checked ~ .content .jokesB:before,
+.visitedChec:checked ~ .content .visitedB:before
+{
+    content: '\f046';
+}
+
+.mapChec:not(:checked) ~ .content .mapB:before,
+.trafficChec:not(:checked) ~ .content .trafficB:before,
+.weatherChec:not(:checked) ~ .content .weatherB:before,
+.autoChec:not(:checked) ~ .content .autoB:before,
+.tvChec:not(:checked) ~ .content .tvB:before,
+.jokesChec:not(:checked) ~ .content .jokesB:before,
+.visitedChec:not(:checked) ~ .content .visitedB:before
+{
+    content: '\f096';
+}
+
+.options
+{
+    width: 200px;
+    transform: translateX(-30px);
+    opacity: 1;
+    border-radius: .1px;
+    box-shadow: 0 10px 20px -5px rgba(0,0,0,.4);
+    background-color: #fff;
+    position: absolute;
+    margin-top: 16px;
+    visibility: hidden;
+    float: right;
+    display: flex;
+    flex-direction: column;
 }
 
 a
@@ -246,9 +307,10 @@ form
 
 .widgets
 {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'leftColumn middleColumn rightColumn';
+    grid-column-gap: 20px;
     align-content: flex-start;
     grid-area: w;
     max-height: 480px;
@@ -256,7 +318,7 @@ form
 
 .widget
 {
-    width: 33%;
+    display: block;
     padding: 10px;
     font-size: 15px;
 }
@@ -293,4 +355,100 @@ form
     font-weight: bold;
     color: #000;
     margin-left: 5px;
+}
+
+.leftColumn
+{
+    grid-area: leftColumn;
+    display: flex;
+    flex-direction: column;
+}
+
+.middleColumn
+{
+    grid-area: middleColumn;
+    display: flex;
+    flex-direction: column;
+}
+
+.rightColumn
+{
+    grid-area: rightColumn;
+    display: flex;
+    flex-direction: column;
+}
+
+.jokesChec:not(:checked) ~ .autoChec:not(:checked) ~ .content .widgets
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'leftColumn rightColumn rightColumn';
+}
+
+.visitedChec:not(:checked) ~ .tvChec:not(:checked) ~ .content .widgets
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'middleColumn rightColumn rightColumn';
+}
+
+.mapChec:not(:checked) ~ .content .maps
+{
+    display: none;
+}
+
+.trafficChec:not(:checked) ~ .content .traffic
+{
+    display: none;
+}
+
+.weatherChec:not(:checked) ~ .content .weather
+{
+    display: none;
+}
+
+.autoChec:not(:checked) ~ .content .auto_news
+{
+    display: none;
+}
+
+.tvChec:not(:checked) ~ .content .tv
+{
+    display: none;
+}
+
+.jokesChec:not(:checked) ~ .content .jokes
+{
+    display: none;
+}
+
+.visitedChec:not(:checked) ~ .content .services
+{
+    display: none;
+}
+
+.joke,
+.jokeB,
+.joke_label
+{
+    display: none;
+    list-style-type: none;
+}
+
+.jokeB[id='joke1']:checked ~ ul .joke1,
+.jokeB[id='joke2']:checked ~ ul .joke2,
+.jokeB[id='joke3']:checked ~ ul .joke3,
+.jokeB[id='joke4']:checked ~ ul .joke4,
+.jokeB[id='joke5']:checked ~ ul .joke5
+{
+    display: list-item;
+}
+
+.jokeB[id='joke1']:checked ~ .joke1,
+.jokeB[id='joke2']:checked ~ .joke2,
+.jokeB[id='joke3']:checked ~ .joke3,
+.jokeB[id='joke4']:checked ~ .joke4,
+.jokeB[id='joke5']:checked ~ .joke5
+{
+    display: block;
 }

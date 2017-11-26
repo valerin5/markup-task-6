@@ -6,11 +6,32 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <input class="settingsB" id="settings" type="checkbox">
+    <input class="settings visitedChec" id="visited" type="checkbox" checked>
+    <input class="settings tvChec" id="tv" type="checkbox" checked>
+    <input class="settings jokesChec" id="jokes" type="checkbox" checked>
+    <input class="settings autoChec" id="auto" type="checkbox" checked>
+    <input class="settings weatherChec" id="weather" type="checkbox" checked>
+    <input class="settings trafficChec" id="traffic" type="checkbox" checked>
+    <input class="settings mapChec" id="map" type="checkbox" checked>
     <div class="content">
         <section class="geolocation">
             <img class="arrow" src="geoarrow.png" alt="arrow">
             <p>Екатеринбург</p>
         </section>
+        <div class="settings">
+            <label for="settings" class="settings">Настройки</label>
+            <div class="options">
+                <label for="visited" class="visitedB">Посещаемое</label>
+                <label for="tv" class="tvB">Телепрограмма</label>
+                <label for="jokes" class="jokesB">Анекдоты</label>
+                <label for="auto" class="autoB">Автомобильные новости</label>
+                <label for="weather" class="weatherB">Погода</label>
+                <label for="traffic" class="trafficB">Пробки</label>
+                <label for="map" class="mapB">Карта</label>
+            </div>
+        </div>
+    
         <section class="right-column">
             <div class="autorization">
                 <div class="login">Login</div>
@@ -80,104 +101,124 @@
             </div>
         </section>
         <section class="widgets">
-            <div class="widget services">
-                <h3><a href="services" class="services_header">Посещаемое</a></h3>
-                <div class="service_description">
-                    <strong class="service_name">Маркет</strong> — товары из Китая
-                </div>
-                <div class="service_description">
-                    <strong class="service_name">Авто.ру</strong> — мощный Хёндай Туссан
-                </div>
-                <div class="service_description">
-                    <strong class="service_name">Недвижимость</strong> — студии с подарками
-                </div>
-                <div class="service_description">
-                    <strong class="service_name">Работа</strong> — главный инженер
-                </div>
-                <div class="service_description">
-                    <strong class="service_name">Такси</strong> — новые выгодные тарифы
-                </div>
-                <div class="service_description">
-                    <strong class="service_name">Здоровье</strong> — поговорите с врачом
-                </div>
-                <div class="service_description">
-                    <strong class="service_name">Коллекции</strong> — всё о свадьбе
-                </div>
-            </div>
-            <div class="widget tv">
-                <h3><a href="tv">Телепрограмма</a></h3>
-                <button class="tv_online">ТВ онлайн</button>
-                <ul class="tv_list">
-                    <li class="tv_list_item">
-                        <span class="time">23:00</span>
-                        <span class="title">Адская кухня</span> <span class="channel">Пятница</span>
-                    </li>
-                    <li class="tv_list_item">
-                        <span class="time">23:00</span>
-                        <span class="title">Дом-2. Город любви</span> <span class="channel">ТНТ</span>
-                    </li>
-                    <li class="tv_list_item">
-                        <span class="time">23:15</span>
-                        <span class="title">Родственник</span> <span class="channel">ТВ Центр</span>
-                    </li>
-                    <li class="tv_list_item">
-                        <span class="time">23:15</span>
-                        <span class="title">Дом восковых фигур</span> <span class="channel">ТВ-3</span>
-                    </li>
-                    <li class="tv_list_item">
-                        <span class="time">23:25</span>
-                        <span class="title">АвтоNews</span> <span class="channel">Матч!</span>
-                    </li>
-                    <li class="tv_list_item">
-                        <span class="time">23:25</span>
-                        <span class="title">Григорий Р</span> <span class="channel">Пятый канал</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="widget jokes">
-                <h3><a href="jokes">Лучшие анекдоты</a></h3>
-                <ul class="jokes_list">
-                    <li class="joke joke1">Вас лечить хорошо или бесплатно?</li>
-                </ul>
-            </div>
-            <div class="widget auto_news">
-                <h3><a href="autonews">Автомобильные новости</a></h3>
-                <div class="auto_news_articles">
-                    <div class="news_article">
-                        Правительство поддержало законопроект о регистрации машиномест
-                        <span class="time">12:19</span>
+            <div class="leftColumn">
+                <div class="widget services">
+                    <h3><a href="services" class="services_header">Посещаемое</a></h3>
+                    <div class="service_description">
+                        <strong class="service_name">Маркет</strong> — товары из Китая
                     </div>
-                    <div class="news_article">
-                        Обзор нового Mitsubishi, за которым выстроилась очередь
-                        <span class="time">12:01</span>
+                    <div class="service_description">
+                        <strong class="service_name">Авто.ру</strong> — мощный Хёндай Туссан
                     </div>
-                    <div class="news_article">
-                        Лады оснастят системой управления со смартфона
-                        <span class="time">11:40</span>
+                    <div class="service_description">
+                        <strong class="service_name">Недвижимость</strong> — студии с подарками
                     </div>
-                    <div class="news_article">
-                        В Китае представили спорткар с двигателем от Focus RS
-                        <span class="time">11:30</span>
+                    <div class="service_description">
+                        <strong class="service_name">Работа</strong> — главный инженер
                     </div>
-                    <div class="news_article">
-                        Священник отчитал прихожан, а они заставили его продать Porshe
-                        <span class="time">12:11</span>
+                    <div class="service_description">
+                        <strong class="service_name">Такси</strong> — новые выгодные тарифы
+                    </div>
+                    <div class="service_description">
+                        <strong class="service_name">Здоровье</strong> — поговорите с врачом
+                    </div>
+                    <div class="service_description">
+                        <strong class="service_name">Коллекции</strong> — всё о свадьбе
                     </div>
                 </div>
+                <div class="widget tv">
+                    <h3><a href="tv">Телепрограмма</a></h3>
+                    <button class="tv_online">ТВ онлайн</button>
+                    <ul class="tv_list">
+                        <li class="tv_list_item">
+                            <span class="time">23:00</span>
+                            <span class="title">Адская кухня</span> <span class="channel">Пятница</span>
+                        </li>
+                        <li class="tv_list_item">
+                            <span class="time">23:00</span>
+                            <span class="title">Дом-2. Город любви</span> <span class="channel">ТНТ</span>
+                        </li>
+                        <li class="tv_list_item">
+                            <span class="time">23:15</span>
+                            <span class="title">Родственник</span> <span class="channel">ТВ Центр</span>
+                        </li>
+                        <li class="tv_list_item">
+                            <span class="time">23:15</span>
+                            <span class="title">Дом восковых фигур</span> <span class="channel">ТВ-3</span>
+                        </li>
+                        <li class="tv_list_item">
+                            <span class="time">23:25</span>
+                            <span class="title">АвтоNews</span> <span class="channel">Матч!</span>
+                        </li>
+                        <li class="tv_list_item">
+                            <span class="time">23:25</span>
+                            <span class="title">Григорий Р</span> <span class="channel">Пятый канал</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="widget weather">
-                <h3><a href="weather">Погода</a> <span class="temperature">−1°C</span></h3>
-                <div class="temperature_prediction">Вечер −3, ночь −3</div>
+            <div class="middleColumn">
+                <div class="widget jokes">
+                    <h3><a href="jokes">Лучшие анекдоты</a></h3>
+                    <input type="radio" class="jokeB" id="joke1" name="jokes" checked>
+                    <input type="radio" class="jokeB" id="joke2" name="jokes">
+                    <input type="radio" class="jokeB" id="joke3" name="jokes">
+                    <input type="radio" class="jokeB" id="joke4" name="jokes">
+                    <input type="radio" class="jokeB" id="joke5" name="jokes">
+                    <ul class="jokes_list">
+                        <li class="joke joke1">Вас лечить хорошо или бесплатно?</li>
+                        <li class="joke joke2">Шутка</li>
+                        <li class="joke joke3">Ха-ха</li>
+                        <li class="joke joke4">Думали может здесь она будет?</li>
+                        <li class="joke joke5">Хоба, и здесь нет</li>
+                    </ul>
+                    <label for="joke1" class="joke_label joke2">Еще</label>
+                    <label for="joke2" class="joke_label joke3">Еще</label>
+                    <label for="joke3" class="joke_label joke4">Еще</label>
+                    <label for="joke4" class="joke_label joke5">Еще</label>
+                    <label for="joke5" class="joke_label joke1">Еще</label>
+                </div>
+                <div class="widget auto_news">
+                    <h3><a href="autonews">Автомобильные новости</a></h3>
+                    <div class="auto_news_articles">
+                        <div class="news_article">
+                            Правительство поддержало законопроект о регистрации машиномест
+                            <span class="time">12:19</span>
+                        </div>
+                        <div class="news_article">
+                            Обзор нового Mitsubishi, за которым выстроилась очередь
+                            <span class="time">12:01</span>
+                        </div>
+                        <div class="news_article">
+                            Лады оснастят системой управления со смартфона
+                            <span class="time">11:40</span>
+                        </div>
+                        <div class="news_article">
+                            В Китае представили спорткар с двигателем от Focus RS
+                            <span class="time">11:30</span>
+                        </div>
+                        <div class="news_article">
+                            Священник отчитал прихожан, а они заставили его продать Porshe
+                            <span class="time">12:11</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="widget traffic">
-                <h3><a href="traffic">Пробки</a> — <span class="traffic_value">1 балл</span></h3>
-                <div class="traffic_description">Сейчас дороги свободны</div>
-            </div>
-            <div class="widget maps">
-                <h3><a href="map" class="maps_title">Карта Екатеринбурга</a></h3>
-                <a href="taxi" class="maps_map_choice">Такси</a>
-                <a href="rasp" class="maps_map_choice">Расписания</a>
-                <a href="raspavt" class="maps_map_choice">Междугородные&nbsp;автобусы</a>
+            <div class="rightColumn">
+                <div class="widget weather">
+                    <h3><a href="weather">Погода</a> <span class="temperature">−1°C</span></h3>
+                    <div class="temperature_prediction">Вечер −3, ночь −3</div>
+                </div>
+                <div class="widget traffic">
+                    <h3><a href="traffic">Пробки</a> — <span class="traffic_value">1 балл</span></h3>
+                    <div class="traffic_description">Сейчас дороги свободны</div>
+                </div>
+                <div class="widget maps">
+                    <h3><a href="map" class="maps_title">Карта Екатеринбурга</a></h3>
+                    <a href="taxi" class="maps_map_choice">Такси</a>
+                    <a href="rasp" class="maps_map_choice">Расписания</a>
+                    <a href="raspavt" class="maps_map_choice">Междугородные&nbsp;автобусы</a>
+                </div>
             </div>
         </section>
     </div>
