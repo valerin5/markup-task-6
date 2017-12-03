@@ -22,6 +22,7 @@
 .settings
 {
     grid-area: st;
+    margin: 17px 0 0 100px;
 }
 
 input.settingsB,
@@ -88,7 +89,7 @@ a
 {
     grid-area: lg;
     display: flex;
-    margin: 5px;
+    margin: 17px 0 0 25px;
     color: #999;
 }
 
@@ -106,10 +107,12 @@ p
 .right-column
 {
     grid-area: r;
+    width: 240px;
 }
 
 .autorization
 {
+    margin: 13px 10px 0 0;
     border-radius: 3px;
     box-shadow: 0 0 2px 0 rgba(0,0,0,.1), 0 2px 6px 0 rgba(0,0,0,.1);
 }
@@ -121,21 +124,39 @@ p
     font-weight: bold;
 }
 
+.number
+{
+    margin-left: 5px;
+}
+
+.banner-under-search
+{
+    margin: 20px 0 0;
+}
+
 .login,
 .email
 {
     padding: 5px;
 }
 
+.email
+{
+    display: flex;
+}
+
 .news
 {
     grid-area: n;
+    margin: 25px 0 0 32px;
 }
 
 .news h2,
 .news h3
 {
     display: inline;
+    margin-right: 5px;
+    color: blue;
 }
 
 .date,
@@ -148,6 +169,11 @@ p
     color: #999;
 }
 
+.news_article
+{
+    margin-bottom: 10px;
+}
+
 ul
 {
     padding: 0;
@@ -156,6 +182,17 @@ ul
 .exchange .currency
 {
     margin-right: 15px;
+}
+
+.tabs_link
+{
+    padding-right: 15px;
+    font-size: 16px;
+}
+
+.currency a
+{
+    color: black;
 }
 
 .exchange div
@@ -179,18 +216,20 @@ ul
 {
     grid-area: s;
     position: relative;
+    margin: 30px 0 0 30px;
 }
 
 form
 {
     font-size: 0;
+    margin-bottom: 10px;
 }
 
 .logo
 {
     grid-area: y;
     font-family: 'Oswald';
-    font-size: 28px;
+    font-size: 40px;
     display: inline-block;
     position: absolute;
     right: 100%;
@@ -206,7 +245,7 @@ form
 
 .input-search
 {
-    width: calc(100% - 114px);
+    width: calc(100% - 150px);
     font-size: 18px;
     border: 2px solid #ffdb4d;
     height: 32px;
@@ -319,14 +358,25 @@ form
 .widget
 {
     display: block;
-    padding: 10px;
+    padding-bottom: 10px;
     font-size: 15px;
+}
+
+.button-tv h3
+{
+    display: inline;
 }
 
 .time
 {
     font-weight: bold;
     padding-right: 10px;
+}
+
+.tv
+{
+    display: flex;
+    flex-direction: column;
 }
 
 .tv_online
